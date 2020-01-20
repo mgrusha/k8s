@@ -1,3 +1,4 @@
+kubectl apply -f nginx-pod.yml  - start new pod
 kubectl describe pods mypod  - get pods status
 kubectl get all   - get all information
 kubectl delete pods mypod  - delete pod
@@ -7,8 +8,9 @@ kubectl logs mypod -c mycontainer -f - logs of the CONTAINER
 kubectl exec -it mypod sh - enter to pod
 kubectl delete all -all  - delete all pods 
 kubectl get pods -n kube-system  - get all namespaces
-
+kubectl get pods,services - get services and nods
 
 YML
 requests - minimum thet is needed to start
 limits - max amount that is needed
+---  - logical splitting of files
