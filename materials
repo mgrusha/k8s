@@ -1,0 +1,7 @@
+kubectl describe pods mypod  - get pods status
+kubectl get all   - get all information
+kubectl delete pods mypod  - delete pod
+kubectl port-forward mypod 8080:80  - external ports
+kubectl proxy - public API
+kubectl logs mypod -c mycontainer -f - logs of the CONTAINER
+kubectl exec -it mypod sh - enter to pod
