@@ -5,3 +5,10 @@ kubectl port-forward mypod 8080:80  - external ports
 kubectl proxy - public API
 kubectl logs mypod -c mycontainer -f - logs of the CONTAINER
 kubectl exec -it mypod sh - enter to pod
+kubectl delete all -all  - delete all pods 
+kubectl get pods -n kube-system  - get all namespaces
+
+
+YML
+requests - minimum thet is needed to start
+limits - max amount that is needed

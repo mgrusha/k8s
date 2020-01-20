@@ -4,6 +4,8 @@ metadata:
   name: nginx
   labels:
     app: nginx
+    stage: dev
+    my_label: my_label
 spec:
   containers: 
   - name: nginx
