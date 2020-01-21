@@ -6,9 +6,13 @@ kubectl port-forward mypod 8080:80  - external ports
 kubectl proxy - public API
 kubectl logs mypod -c mycontainer -f - logs of the CONTAINER
 kubectl exec -it mypod sh - enter to pod
-kubectl delete all -all  - delete all pods 
+kubectl delete all --all  - delete all pods 
+kubectl delete pods %POD_NAME% - delete specific pod
 kubectl get pods -n kube-system  - get all namespaces
 kubectl get pods,services - get services and nods
+kubectl edit replicaset.apps - edit replicaset
+kubectl describe replicasets.apps
+kubectl rollout history deployment %DEPLOYMENT_NAME%  - rollback changes back of the deployment file
 
 YML
 requests - minimum thet is needed to start
