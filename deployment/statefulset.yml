@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: 
+  name: nginx-statefulset
+spec:
+  replicas: 5
+  serviceName: application
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: application
+      stage: dev
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          resources:
+            limits:
+              memory: "32Mi"
+              cpu: "100m"
+          ports:
+            - containerPort: 80
